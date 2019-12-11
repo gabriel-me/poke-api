@@ -9,6 +9,6 @@ const router = express.Router()
 router.post(endpoint, user.create)
 
 // Authenticated routes
-router.put(endpoint, handleToken, user.updateById)
+router.put(`${endpoint}/:id`, handleToken, user.updateById)
 
 module.exports = router

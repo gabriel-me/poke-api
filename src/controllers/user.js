@@ -21,7 +21,7 @@ module.exports = {
 
   async updateById(request, response) {
     try {
-      const userId = request.body.id
+      const userId = request.params.id
       const currentUser = await User.findById(userId)
 
       if (!currentUser)
