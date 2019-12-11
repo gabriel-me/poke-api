@@ -2,7 +2,7 @@ const express = require('express')
 const handleToken = require('../middlewares/handleToken')
 const pokemon = require('../controllers/pokemon')
 
-const endpoint = '/pokemons'
+const endpoint = '/api/pokemons'
 const router = express.Router()
 
 // Public routes

@@ -2,7 +2,7 @@ const express = require('express')
 const handleToken = require('../middlewares/handleToken')
 const user = require('../controllers/user')
 
-const endpoint = '/users'
+const endpoint = '/api/users'
 const router = express.Router()
 
 // Public routes

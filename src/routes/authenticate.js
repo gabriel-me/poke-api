@@ -3,6 +3,6 @@ const authenticate = require('../controllers/authenticate')
 
 const router = express.Router()
 
-router.post('/authenticate', authenticate.signInWithEmailAndPassword)
+router.post('/api/authenticate', authenticate.signInWithEmailAndPassword)
 
 module.exports = router
