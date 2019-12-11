@@ -36,6 +36,157 @@ mongod
 npm run start
 ```
 
-## Documentação API
+## Endpoints
 
-<a href="https://documenter.getpostman.com/view/6260177/SWE3dKvG?version=latest" target="_blank">Clique aqui para ver a documentação dos endpoints.</a>
+### Autenticação
+
+```
+- ENDPOINT
+  http://localhost:8082/api/authenticate
+
+- HEADERS
+  Content-Type: application/json
+
+- REQUEST
+  POST
+
+- BODY
+{
+	"email": "youremail@gmail.com",
+	"password": "yourpassword"
+}
+```
+
+### Adicionar usuário
+
+```
+- ENDPOINT
+  http://localhost:8082/api/user
+
+- HEADERS
+  Content-Type: application/json
+
+- REQUEST
+  POST
+
+- BODY
+{
+	"name": "Your name",
+	"lastName": "Your last name",
+	"email": "youremail@gmail.com",
+	"password": "yourpassword"
+}
+```
+
+### Editar usuário
+
+```
+- ENDPOINT
+  http://localhost:8082/api/user/123456
+
+- HEADERS
+  Content-Type: application/json
+
+- REQUEST
+  PUT
+
+- BODY
+{
+  "name": "New name",
+  "lastName": "New last name",
+  "email": "newemail@gmail.com",
+  "password": "newpassword"
+}
+```
+
+### Listar pokemons 
+
+```
+- ENDPOINT
+  http://localhost:8082/api/pokemon
+
+- HEADERS
+  Content-Type: application/json
+
+- REQUEST
+  GET
+```
+
+### Adicionar pokemon
+
+```
+- ENDPOINT
+  http://localhost:8082/api/pokemon
+
+- HEADERS
+  Content-Type: application/json
+  Authorization: token
+
+- REQUEST
+  POST
+
+- BODY
+{
+	"name": "Pikachu",
+	"color": "Yellow",
+	"height": "4",
+	"weight": "321",
+	"type": [
+		{
+			"name": "eletric"
+		}
+	],
+	"abilities": [
+		{
+			"name": "static"
+		}
+	]
+}
+```
+
+### Editar pokemon
+
+```
+- ENDPOINT
+  http://localhost:8082/api/pokemon/123456
+
+- HEADERS
+  Content-Type: application/json
+  Authorization: token
+
+- REQUEST
+  PUT
+
+- BODY
+{
+	"name": "Pikachu",
+	"color": "Yellow",
+	"height": "4",
+	"weight": "321",
+	"type": [
+		{
+			"name": "eletric"
+		}
+	],
+	"abilities": [
+		{
+			"name": "static"
+		}
+	]
+}
+```
+
+
+### Excluir pokemon
+
+```
+- ENDPOINT
+  http://localhost:8082/api/pokemon/123456
+
+- HEADERS
+  Content-Type: application/json
+  Authorization: token
+
+- REQUEST
+  DELETE
+```
