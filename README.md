@@ -61,7 +61,7 @@ npm run start
 
 ```
 - ENDPOINT
-  http://localhost:8082/api/user
+  http://localhost:8082/api/users
 
 - HEADERS
   Content-Type: application/json
@@ -82,7 +82,7 @@ npm run start
 
 ```
 - ENDPOINT
-  http://localhost:8082/api/user/123456
+  http://localhost:8082/api/users/123456
 
 - HEADERS
   Content-Type: application/json
@@ -103,7 +103,7 @@ npm run start
 
 ```
 - ENDPOINT
-  http://localhost:8082/api/pokemon
+  http://localhost:8082/api/pokemons
 
 - HEADERS
   Content-Type: application/json
@@ -116,7 +116,7 @@ npm run start
 
 ```
 - ENDPOINT
-  http://localhost:8082/api/pokemon
+  http://localhost:8082/api/pokemons
 
 - HEADERS
   Content-Type: application/json
@@ -148,7 +148,7 @@ npm run start
 
 ```
 - ENDPOINT
-  http://localhost:8082/api/pokemon/123456
+  http://localhost:8082/api/pokemons/123456
 
 - HEADERS
   Content-Type: application/json
@@ -181,7 +181,7 @@ npm run start
 
 ```
 - ENDPOINT
-  http://localhost:8082/api/pokemon/123456
+  http://localhost:8082/api/pokemons/123456
 
 - HEADERS
   Content-Type: application/json
