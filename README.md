@@ -1,4 +1,4 @@
-# pokemon-api
+# poke-api
 
 Uma API RESTful de Pokémons
 
@@ -11,13 +11,13 @@ Uma API RESTful de Pokémons
 ## Clonando o repositório
 
 ```
-git clone https://github.com/gabriel-me/pokemon-api.git
+git clone https://github.com/gabriel-me/poke-api.git
 ```
 
 ## Instalando dependências
 
 ```
-cd pokemon-api
+cd poke-api
 ```
 
 ```
