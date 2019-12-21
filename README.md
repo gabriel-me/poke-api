@@ -131,6 +131,7 @@ npm run start
 	"color": "Yellow",
 	"height": "4",
 	"weight": "321",
+	"avatar_url": "url",
 	"type": [
 		{
 			"name": "eletric"
