@@ -6,7 +6,6 @@ const userRoute = require('./routes/user')
 const pokemonRoute = require('./routes/pokemon')
 const authenticateRoute = require('./routes/authenticate')
 
-const port = 8082
 const app = express()
 const server = http.createServer(app)
 
@@ -20,6 +19,6 @@ app.use(authenticateRoute)
 app.use(userRoute)
 app.use(pokemonRoute)
 
-server.listen(port, () => {
-  console.log(`Server listening on port ${port}`)
+server.listen(process.env.PORT || 8082, () => {
+  console.log(`Server listening on port`)
 })
