@@ -18,6 +18,10 @@ const UserSchema = new Schema({
 		type: Number,
 		required: true
 	},
+	avatar_url: {
+		type: String,
+		required: false
+	},
 	type: [{
 		name: String,
 		required: false
