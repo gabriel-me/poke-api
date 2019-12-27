@@ -6,6 +6,10 @@ const UserSchema = new Schema({
 		type: String,
 		required: true
 	},
+	number: {
+		type: Number,
+		required: true,
+	},
 	color: {
 		type: String,
 		required: true
@@ -23,11 +27,11 @@ const UserSchema = new Schema({
 		required: false
 	},
 	type: [{
-		name: String,
+		type: String,
 		required: false
 	}],
 	abilities: [{
-		name: String,
+		type: String,
 		required: false
 	}]
 })
