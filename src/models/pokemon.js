@@ -30,6 +30,30 @@ const UserSchema = new Schema({
 		type: String,
 		required: false
 	},
+	attack: {
+		type: Number,
+		required: false
+	},
+	defense: {
+		type: Number,
+		required: false
+	},
+	speed: {
+		type: Number,
+		required: false
+	},
+	specialAttack: {
+		type: Number,
+		required: false
+	},
+	specialDefense: {
+		type: Number,
+		required: false
+	},
+	hp: {
+		type: Number,
+		required: false
+	},
 	type: [{
 		type: String,
 		required: false
