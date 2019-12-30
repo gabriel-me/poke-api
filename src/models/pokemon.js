@@ -58,9 +58,10 @@ const UserSchema = new Schema({
 		type: String,
 		required: false
 	}],
-	abilities: [{
-		type: String,
-		required: false
+	abilities: [{ 
+		name: String,
+		force: Number,
+		description: String,
 	}]
 })
 
