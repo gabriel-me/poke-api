@@ -34,6 +34,15 @@ module.exports = {
     }
   },
 
+  uploadFile(request, response) {
+    try {
+      const file = request.file
+      return response.status(201).json(file)
+    } catch (error) {
+      return response.status(400).json(error)
+    }
+  },
+
   async updateById(request, response) {
     try {
       const pokemonId = request.params.id

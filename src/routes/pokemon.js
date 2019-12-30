@@ -1,5 +1,6 @@
 const express = require('express')
 const handleToken = require('../middlewares/handleToken')
+const handleUpload = require('../middlewares/handleUpload')
 const pokemon = require('../controllers/pokemon')
 
 const endpoint = '/api/pokemons'
@@ -11,6 +12,7 @@ router.get(`${endpoint}/:name`, pokemon.getByName)
 
 // Authenticated routes
 router.post(endpoint, handleToken, pokemon.create)
+router.post(`${endpoint}/upload`, handleUpload.single('img'), pokemon.uploadFile)
 router.put(`${endpoint}/:id`, handleToken, pokemon.updateById)
 router.delete(`${endpoint}/:id`, handleToken, pokemon.deleteById)
 
