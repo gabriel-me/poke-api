@@ -11,10 +11,10 @@ module.exports = {
     }
   },
 
-  async getByName(request, response) {
+  async getById(request, response) {
     try {
-      const pokemonName = request.params.name
-      const selectedPokemon = await Pokemon.findOne({ name: pokemonName })
+      const pokemonId = request.params.id
+      const selectedPokemon = await Pokemon.findById(pokemonId)
 
       if (!selectedPokemon) 
         return response.status(404).json({ 'message': 'Not Found' })

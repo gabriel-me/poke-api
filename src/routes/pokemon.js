@@ -8,7 +8,7 @@ const router = express.Router()
 
 // Public routes
 router.get(endpoint, pokemon.getAll)
-router.get(`${endpoint}/:name`, pokemon.getByName)
+router.get(`${endpoint}/:id`, pokemon.getById)
 
 // Authenticated routes
 router.post(endpoint, handleToken, pokemon.create)
