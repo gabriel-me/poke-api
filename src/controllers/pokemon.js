@@ -38,7 +38,7 @@ module.exports = {
     try {
       const file = request.file
       const pokemonId = request.body.id
-      const avatar_url = `${file.filename}`
+      const avatar_url = `http://api-node-pokedex.herokuapp.com/files/${file.filename}`
 
       const currentPokemon = await Pokemon.findById(pokemonId)
       await currentPokemon.updateOne({ avatar_url: avatar_url })
