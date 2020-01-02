@@ -37,7 +37,7 @@ module.exports = {
   async uploadFile(request, response) {
     try {
       const file = request.file
-      const pokemonId = request.body.id
+      const pokemonId = request.params.id
       const avatar_url = `http://api-node-pokedex.herokuapp.com/files/${file.filename}`
 
       const currentPokemon = await Pokemon.findById(pokemonId)
