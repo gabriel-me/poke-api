@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express')
 const cors = require('cors')
 const http = require('http')
@@ -19,6 +21,4 @@ app.use(authenticateRoute)
 app.use(userRoute)
 app.use(pokemonRoute)
 
-server.listen(process.env.PORT || 8082, () => {
-  console.log(`Server listening on port`)
-})
+server.listen(process.env.PORT || 8082)

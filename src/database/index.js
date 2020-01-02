@@ -2,15 +2,16 @@ const mongoose = require('mongoose')
 
 module.exports = {
 
-  mongoDB: 'mongodb://localhost/mongo_database',
-
   connect() {
-    mongoose.connect(this.mongoDB, {
-      useCreateIndex: true,
-      useNewUrlParser: true,
-      useUnifiedTopology: true
-    })
-    
+    mongoose.connect(
+      process.env.MONGO_URL,
+      {
+        useCreateIndex: true,
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+      }
+    )
+
     mongoose.Promise = global.Promise
 
     return mongoose
