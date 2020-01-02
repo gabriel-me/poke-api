@@ -34,9 +34,15 @@ module.exports = {
     }
   },
 
-  uploadFile(request, response) {
+  async uploadFile(request, response) {
     try {
       const file = request.file
+      const pokemonId = request.body.id
+      const avatar_url = `${file.filename}`
+
+      const currentPokemon = await Pokemon.findById(pokemonId)
+      await currentPokemon.updateOne({ avatar_url: avatar_url })
+    
       return response.status(201).json(file)
     } catch (error) {
       return response.status(400).json(error)
